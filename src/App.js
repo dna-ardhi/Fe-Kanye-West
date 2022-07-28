@@ -76,34 +76,38 @@ function App() {
       {favorites.length > 0 && (
         <div className='favorite'>
           <h5>Favorite</h5>
-          <ListGroup>
-            {favorites.map((favQuote, idx) => (
-              <ListGroup.Item
-                key={`fav_${idx}`}
-                className='text-wrap'
-                style={{ width: '350px' }}
-              >
-                {favQuote}
-              </ListGroup.Item>
-            ))}
-          </ListGroup>
+          <div className='list-quote'>
+            <ListGroup>
+              {favorites.map((favQuote, idx) => (
+                <ListGroup.Item
+                  key={`fav_${idx}`}
+                  className='text-wrap'
+                  style={{ width: '350px' }}
+                >
+                  {favQuote}
+                </ListGroup.Item>
+              ))}
+            </ListGroup>
+          </div>
         </div>
       )}
 
       {myQuotes.length > 0 && (
         <div className='myquote'>
           <h5 className='text-end'>My Quotes</h5>
-          <ListGroup>
-            {myQuotes.map((myQuote, idx) => (
-              <ListGroup.Item
-                key={`my_${idx}`}
-                className='text-wrap'
-                style={{ width: '350px' }}
-              >
-                {myQuote}
-              </ListGroup.Item>
-            ))}
-          </ListGroup>
+          <div className='list-quote'>
+            <ListGroup>
+              {myQuotes.map((myQuote, idx) => (
+                <ListGroup.Item
+                  key={`my_${idx}`}
+                  className='text-wrap'
+                  style={{ width: '350px' }}
+                >
+                  {myQuote}
+                </ListGroup.Item>
+              ))}
+            </ListGroup>
+          </div>
         </div>
       )}
     </Container>
